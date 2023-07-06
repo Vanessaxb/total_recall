@@ -36,7 +36,7 @@ console.log(firstVariable);
 let yourName = 'Vanessa';
 console.log(`Hello, my name is ${yourName}`);
 
-//*C. Booleans
+//*C. Booleans ssssss
 const a = 4;
   const b = 53;
   const c = 57;
@@ -283,7 +283,7 @@ function getMultipleLengths(arr) {
 //         return arr.length;
 //     });
 // }
-console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+// console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 
 
 //*G. maxOfThree
