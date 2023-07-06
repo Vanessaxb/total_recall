@@ -216,3 +216,221 @@ console.log(`Thom is looking fierce in a ` + thomsCloset[0][0] + `, ` + thomsClo
 thomsCloset[1][2] = "Footie Pajamas";
 console.log(thomsCloset);
 
+
+//* IV. Functions
+
+
+//*A. printGreeting
+function printGreeting(name) {console.log(`Hello there, ${name}!`);}
+printGreeting("John");
+
+//*B. printCool
+function printCool(name) {console.log(`${name} is cool`);}
+printCool("Mark");
+
+//*C. calculateCube
+function calculateCube(number) {
+    return number ** 3;}
+    console.log(calculateCube(5));
+
+//??? other way of doing it// cant do it?????
+// function calculateCube(number1) {
+// Math.cube(number1)}
+// console.log(calculateCube(5));
+
+//*D. isVowel
+// function isVowel('') { }
+function isVowel(letter) {
+    return (letter.toUpperCase() === "A") || (letter.toUpperCase() === "E") || (letter.toUpperCase() === "I") || (letter.toUpperCase() === "O") || (letter.toUpperCase() === "U");
+}
+
+console.log(isVowel("e"));
+
+
+//*E. getTwoLengths
+function getTwoLengths(string1, string2) {
+    // const array1 = []
+    return [string1.length, string2.length]
+}
+console.log(getTwoLengths("Hank", "Hippopopalous"));
+
+
+//*F. getMultipleLengths ??? I cant do it. Dont understand map(function(str))
+function getMultipleLengths(arr) {
+    const lengths = [];
+    for (let i = 0; i < arr.length; i++) {
+        lengths.push(arr[i].length);}
+    return lengths};
+// }
+
+//     return arr.map(function(arr){ // I dont understand this line
+//         return arr.length;
+//     });
+// }
+console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+
+
+//*G. maxOfThree
+function maxOfThree(numb1, numb2, numb3) {
+    if (numb1 == numb2 == numb3){
+        return numb1
+    } else if (numb1 >= numb2 && numb1 >= numb3) {
+        return numb1
+    } else if (numb2 >= numb1 && numb2 >= numb3) {
+        return numb2
+    } else if (numb3 >= numb2 && numb3 >= numb1) {
+        return numb3}    
+}
+console.log(maxOfThree(10, 9, 150));
+
+//*H. printLongestWord // dont understand why keeps giving undefined
+function printLongestWord (arrString) {
+    let word = '';
+    for (let j = 0; j < arrString.length; j++) {
+        if(arrString[j].length > word.length) {
+            word = arrString[j];}
+  } 
+  console.log(word);
+}
+console.log(printLongestWord(["BoJacky", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+
+
+
+//*Objects
+//* A. Make a user object
+const user = {name: 'Ana', 
+email: 'test@a.com', 
+age: '23', 
+purchased:[]}
+
+//*B. Update the user
+user.email = 'newemail@a.com';
+user.age++;
+
+//*C. Adding keys and values
+user.location = 'NYC';
+console.log(user);
+
+//*D. Shopaholic!
+//1 push "carbohydrates" to the purchasedarray.
+user.purchased.push('carbohydrates');
+console.log(user);
+//2 push "peace of mind" to the purchasedarray.
+user.purchased.push('peace of mind');
+console.log(user);
+//3 push "Merino jodhpurs" to the purchasedarray.
+user.purchased.push('Merino jodhpurs');
+//4 console log just merino
+console.log(user.purchased[2]);
+
+//*E. Object-within-object
+//1 add friend object within object
+user.friend = {
+    name: "Grace Hopper",
+    age: 85,
+    location: "CA",
+    purchased: []
+}
+//2 log friend's name
+console.log(user.friend.name);
+//3 log friend's location
+console.log(user.friend.location);
+//4 CHANGE the friend's age to 55
+user.friend.age = '55';
+console.log(user.friend.age);
+//5 push ring to purchased
+user.friend.purchased.push('The One Ring');
+//6 .push()to add "A latte" to the friend's purchased
+user.friend.purchased.push('A latte');
+//7 log a latte only
+console.log(user.friend.purchased[1]);
+
+//*F Loops
+//1 for loop that iterates over the User's purchased array
+for (let item in user.purchased) {
+    console.log(`${user.purchased[item]}`);
+}
+//2 for loop that iterates over the Friend's purchasedarray
+for (let item in user.friend.purchased) {
+    console.log(`${user.friend.purchased[item]}`);
+}
+
+//*G Functions can operate on objects
+/*1 Write a single function updateUserthat takes no parameters. 
+When the function is run, it should: it should increment the 
+user's age by 1 make the user's name uppercase */
+
+let updateUser = () => {
+    user.age++
+    user.name = user.name.toUpperCase()
+}
+updateUser(user)
+console.log(user);
+//2 
+let oldAndLoud = (person) => {
+    person.age++
+    person.name = person.name.toUpperCase()
+
+}
+
+// console.log(oldAndLoud(user)); //* why it gives me undefinied???
+
+//* Cat Combinator
+//1. Mama cat
+const cat1 = {name: 'chino', breed: 'white', age: 2}
+console.log(cat1.name);
+console.log(cat1.age);
+
+//2. Papa cat
+const cat2 = { name: 'don', breed: 'orange', age: 4}
+
+//3. Combine Cats!
+function combineCats(mama, papa) {
+
+    console.log(mama);
+    console.log(papa);
+}
+combineCats(cat1, cat2)
+
+//4. Cat brain bender //*why does it result in undefined
+console.log(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)));
+console.log(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2), combineCats(cat1, cat2)));
+//*testing examples
+// const flowers = ['peony', 'daffodil', 'marigold'];
+ 
+// function addFlower(arr) {
+//   arr.push('lily');
+// }
+ 
+// addFlower(flowers);
+ 
+// console.log(flowers); // Output: ['peony', 'daffodil', 'marigold', 'lily']
+
+// let spaceship = {
+//     crew: {
+//     captain: { 
+//         name: 'Lily', 
+//         degree: 'Computer Engineering', 
+//         cheerTeam() { console.log('You got this!') } 
+//         },
+//     'chief officer': { 
+//         name: 'Dan', 
+//         degree: 'Aerospace Engineering', 
+//         agree() { console.log('I agree, captain!') } 
+//         },
+//     medic: { 
+//         name: 'Clementine', 
+//         degree: 'Physics', 
+//         announce() { console.log(`Jets on!`) } },
+//     translator: {
+//         name: 'Shauna', 
+//         degree: 'Conservation Science', 
+//         powerFuel() { console.log('The tank is full!') } 
+//         }
+//     }
+// }; 
+
+// // Write your code below
+// for (let crewMember in spaceship.crew) {
+//   console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`)
+// }
