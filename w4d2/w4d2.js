@@ -1,13 +1,29 @@
 /*
-A. Q + A
-How do we assign a value to a variable?
-How do we change the value of a variable?
-How do we assign an existing variable to a new variable?
-Remind me, what are declare, assign, and define?
-What is pseudocoding and why should you do it?
-What percentage of time should be spent thinking 
+//* A. Q + A
+//*How do we assign a value to a variable?
+Using let or const, you can assign a value to a variable using the = operator
+when you declare it or after the declaration and before accessing it.
+
+//*How do we change the value of a variable?
+Once you declare a variable and assign it a value, your program can manipulate what's
+stored in the variable as it run
+
+//*How do we assign an existing variable to a new variable?
+Using the assignment operator (`=`), you can assign a new value to it, 
+or perform operations and update its current value.
+
+//*Remind me, what are declare, assign, and define?
+To declare is to create a variable, function, object, or array with proper syntax. To assign is to assign that declaration 
+to a value, to define is to create that value.
+
+//*What is pseudocoding and why should you do it?
+It is used for creating an outline or a rough draft of a program.
+System designers write pseudocode to ensure that programmers understand a software project's 
+requirements and align code accordingly.
+//*What percentage of time should be spent thinking 
 about how you're going to solve a 
 problem vs actually typing in code to solve it?
+My guess is 70% thinking vs 30% coding
 */
 
 //*B. Strings
@@ -395,6 +411,11 @@ combineCats(cat1, cat2)
 //4. Cat brain bender //*why does it result in undefined
 console.log(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)));
 console.log(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2), combineCats(cat1, cat2)));
+
+
+
+
+
 //*testing examples
 // const flowers = ['peony', 'daffodil', 'marigold'];
  
